@@ -22,7 +22,7 @@ const NotesClient = () => {
   const openModal = () => setIsModalOpen(true);
 
   const { data } = useQuery({
-    queryKey: ['notes', debouncedQuery, currentPage],
+    queryKey: ['notes', debouncedQuery, currentPage, 'All'],
     queryFn: () => fetchNotes(debouncedQuery, currentPage, 'All'),
     placeholderData: keepPreviousData,
     refetchOnMount: false,
